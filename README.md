@@ -15,6 +15,7 @@ Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunl
 *  Biraz lehim teli, havya ve lehim bilgisi (PIR ve Röle için)(WH versiyonu aldıysanız gerekli değil.)
 *  Erkek-Dişi jumper kablo (PIR ve Röle için)
 *  Micro SD Card okuyucu  
+*  Micro USB kablosu
 ### Gereken yazılımlar
 *  Gereken yazılım son sürüm [Raspbian](https://www.raspberrypi.org/downloads/raspberry-pi-os/) burada kullanacağınız Raspbian: Lite sürümü olmamalı, önerilen yazılımlar işimize yaramasa da yükleyip yüklememek size kalıyor. Ben burada "Raspberry Pi OS (32-bit) with desktop" Mayıs 2020 sürümünü kullandım.
 *  Raspberry Zero için derlenmiş özel yükleme scripti:
@@ -22,7 +23,7 @@ Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunl
 *  Windows kullanıcısıysanız WinSCP ve Putty programlarını şiddetle öneriyorum, düzenleme ve kontrol açısından çok işimize yarıyorlar. [WinSCP](https://winscp.net/eng/downloads.php) - [Putty](https://winscp.net/eng/downloads.php#putty)
 *  SD Card Formatter [Link](https://www.sdcard.org/downloads/formatter/)
 *  Balena Etcher [Link](https://www.balena.io/etcher/)	
-*  VNC Viewer [Link]()
+*  VNC Viewer [Link](https://www.realvnc.com/en/connect/download/viewer/)
 
 ## Raspberry Zero'nun hazırlanması
 * Öncelikle SD Card okuyucumuza SD Cardımızı takıyoruz ve bilgisayara yerleştiriyoruz. SD Card Formatter uygulamasından kartımızı biçimlendiriyoruz. Daha sonra Balena Etcher uygulamasından indirdiğimiz Raspbian imajını seçip Flash işlemini başlatıyoruz ve bitmesini bekliyoruz(Bilgisayar ve SD Card özelliğine göre 2-7 dk arası sürebilir.). Flash işlemi bittikten sonra program otomatik kartımızı bilgisayardan çıkaracağı için SD Card okuyucumuzu sök-tak yapıyoruz. SD kartımızı bilgisayara tekrar taktıktan sonra disklerden boot olana giriyoruz ve diskin içine içi boş bir dosya oluşuturup ismini " ssh " koyuyoruz(Bu noktada dosyanın herhangi bir uzantıya sahip olmadığını kontrol edin.). Daha sonra " wpa_supplicant.conf "  dosyası oluşturuyoruz ve belirtilen kodları içine yazıyoruz.
@@ -36,3 +37,8 @@ network={
 }
 ````
 * Kodları içine yazarken veya kopyalarken WLAN isminizi ve şifrenizi yazmayı unutmayın.
+* Bu işlemleri tamamladıktan sonra SD kartımızı bilgisayardan söküp Raspi'ye takabilir ve gücünü verebiliriz. Bu aşamada ekran mevcut ise bağlayınız ve açılma aşamalarını kontrol edin(Zorunlu değil.). Açıldıktan sonra Raspimizin ip adresini öğrenelim bunu modem arayüzünüzden öğrenebilirsiniz. Bunun için internetten yardım alabilirsiniz. Raspimiz açıldı ve ip adresini öğrendiğimize göre şimdi gelelim nasıl bağlanacağımız kısmına bunun için Putty programını çalıştırıyoruz. Putty programı açıldıktan sonra " Hostname or IP adress " yazan kısma raspimizin ip adresini yazıp open diyoruz, bu işlemi sürekli tekrarlamak istemezseniz "Saved Session" kısmına bir isim yazıp sağ tarafından Save diyebilirsiniz. Terminalimiz açıldığı zaman bize kullanıcı adını soracaktır raspinin varsayılan kullanıcı adı " pi " şifresi ise " raspberry "dir. Bilgilerimizi girdikten sonra işlemler başarılı ise pi@ipadresi şeklinde terminalimiz açılacaktır. Bu kısımda VNC seçeneğini aktif etmek için terminale " sudo raspi-config " yazıyoruz ve enterliyoruz. Açılan ekranda Interfacing Options seçeğini seçiyoruz ve enterlıyoruz. Açılan ekrandan VNC seçeneğinin üstüne gelip enterlıyoruz ve bize sorulan soruya onay veriyoruz. Daha sonra tekrar terminal ekranına gelip " sudo reboot " komutunu yazarak raspiyi yeniden başlatıyoruz. Raspi açıldıktan sonra artık bilgisayarımızın masaüstüne uzaktan bağlanabilir ve kontrol edebiliriz şimdi gelin bunu test edelim. VNC Viewer programını çalıştırıyoruz, yukarıdaki " Enter a VNC Server adress or search " yerine IP adresimizi yazıp enterlıyoruz ve bize sorulan kullanıcı adı ve şifremizi giriyoruz " pi:raspberry ". Herhangi bir sorunla karşılaşmadıysanız karşınızda raspinin masaüstü! Şimdi gelin MagicMirroru kurmaya başlayalım.
+### MagicMirror kurulumu
+* Önceki adımları başarıyla tamamladıysanız sizi tebrik ediyorum ve gelin şimdi Ayna yazılımını kuralım.
+* Bu aşamayı ister Putty terminali üzerinden isterseniz de VNC Viewer ile bağlanıp Raspi terminali üzerinden yapabilirsiniz fakat ben size Putty'i öneriyorum.
+* Terminalimizi açtığımız zaman gereken yazılımlar kısmında belirtmiş olduğum bash komutunu kopyalıyoruz ve terminalimize yapıştırıyoruz. Putty programını kullanıyorsanız sağ tık ile yapıştırabilirsiniz. Enterladığımız anda yükleme işleminiz başlamış olacak ve bu işlem çok uzun sürebilecektir(20-40dk) bu yüzden eğer ki Putty kullanıyorsanız Putty programını kapatmamanız Raspi'yi ve bilgisayarınızı internetten kesmemeniz gerekmektedir.
