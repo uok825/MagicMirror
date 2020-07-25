@@ -26,7 +26,7 @@ Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunl
 
 ## Raspberry Zero'nun hazırlanması
 * Öncelikle SD Card okuyucumuza SD Cardımızı takıyoruz ve bilgisayara yerleştiriyoruz. SD Card Formatter uygulamasından kartımızı biçimlendiriyoruz. Daha sonra Balena Etcher uygulamasından indirdiğimiz Raspbian imajını seçip Flash işlemini başlatıyoruz ve bitmesini bekliyoruz(Bilgisayar ve SD Card özelliğine göre 2-7 dk arası sürebilir.). Flash işlemi bittikten sonra program otomatik kartımızı bilgisayardan çıkaracağı için SD Card okuyucumuzu sök-tak yapıyoruz. SD kartımızı bilgisayara tekrar taktıktan sonra disklerden boot olana giriyoruz ve diskin içine içi boş bir dosya oluşuturup ismini " ssh " koyuyoruz(Bu noktada dosyanın herhangi bir uzantıya sahip olmadığını kontrol edin.). Daha sonra " wpa_supplicant.conf "  dosyası oluşturuyoruz ve belirtilen kodları içine yazıyoruz.
-´´´´javascript
+````
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 
@@ -34,5 +34,5 @@ network={
  ssid="WLAN isminiz."
  psk="WLAN şifreniz."
 }
-´´´´
+````
 * Kodları içine yazarken veya kopyalarken WLAN isminizi ve şifrenizi yazmayı unutmayın.
