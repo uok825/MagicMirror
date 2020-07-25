@@ -20,4 +20,4 @@ Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunl
 *  Windows kullanıcısıysanız WinSCP ve Putty programlarını şiddetle öneriyorum, düzenleme ve kontrol açısından çok işimize yarıyorlar. [WinSCP](https://winscp.net/eng/downloads.php) - [Putty](https://winscp.net/eng/downloads.php#putty)
 *  Mac hakkında bilgim yok.
 
-##Raspberry Zero'nun hazırlanması
+## Raspberry Zero'nun hazırlanması
