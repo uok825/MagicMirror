@@ -88,3 +88,8 @@ network={
 * Bu esnada monitörünüzün herhangi bir ekran yansıması olmadığı zaman kapanma modu varsa röleye ihtiyacınız yok. Fakat benim monitörümde böyle bir özellik olmadığından dolayı ben monitörün gücünü keserek bu işlemi gerçekleştiriyorum. Eğer röle kullanmıyorsanız size uygun olan PIR modülünü modüller sayfasından bulup kurarak bu işlemi gerçekleştirebilirsiniz. Eğerki özellik yoksa benim gibi biraz daha beklemeniz gerekmekte.
 * PIR sensör ve röle kartının çalışması için hala uğraşıyorum.
 ## Aynamın Fotoğrafları
+![Resim1](images/Resim1.jpg)
+![Resim2](images/Resim2.jpg)
+![Resim3](images/Resim3.jpg)
+![Resim4](images/Resim4.jpg)
+![Resim5](images/Resim5.jpg)
