@@ -82,3 +82,9 @@ network={
 * Ardından config dosyamızın calendar başlığı altında header sekmesini türkçeye çevirip düzenliyoruz ben Takvimim Ve Özel Günler yazdım. Calendars kısmında yazılı olan linki silip tırnak içinde yine kendi iCal linkimizi yapıştırıyoruz. Bu kısımda bu kadar ctrl+s diyerek yine kaydedebilirsiniz.
 * Şimdi gelelim haber düzenlemeye bu esnada config dosyamızdan newsfeed modülüne gelip title olan kısma haber sitesinin ismi ve url kısmına haber sitemizin besleme linkini yazıyoruz. Birden fazla haber sitesi yazmak için benim config dosyamı örnek alabilirsiniz.
 * Bazı haber sitelerinin besleme linkleri : [Link](https://haberss.mertskaplan.com/Haber_sitelerinin_RSS_adresleri)
+### PIR ve Röle kartının bağlantıları
+* Bu bağlantılar için raspimizin gpio pinlerini kullanıyoruz.
+* Pi'nin hangi pinine bağlayacağınız size kalmış ben buraya hangi pinlerin güç,ground ve veri hattı olduğunu belirten bir [link](https://pi4j.com/1.2/images/j8header-zero.png) bırakıyorum.
+* Bu esnada monitörünüzün herhangi bir ekran yansıması olmadığı zaman kapanma modu varsa röleye ihtiyacınız yok. Fakat benim monitörümde böyle bir özellik olmadığından dolayı ben monitörün gücünü keserek bu işlemi gerçekleştiriyorum. Eğer röle kullanmıyorsanız size uygun olan PIR modülünü modüller sayfasından bulup kurarak bu işlemi gerçekleştirebilirsiniz. Eğerki özellik yoksa benim gibi biraz daha beklemeniz gerekmekte.
+* PIR sensör ve röle kartının çalışması için hala uğraşıyorum.
+## Aynamın Fotoğrafları
