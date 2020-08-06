@@ -70,7 +70,7 @@ network={
 * Modülü başarıyla kurduysak terminalimize " pm2 restart 0 " yazarak aynamızın yazılımını yeniden başlatıyoruz. 2dk kadar sürebilir.
 * Bu esnada ayna açıldıktan sonra logları kontrol etmek için " pm2 logs --lines=100 " komudunu uygulayabilirsiniz.
 * Eski logları silmek için " pm2 flush " komudu kullanılır ve benim size tavsiye ettiğim yeni bir modül yüklediğinizde önce " pm2 stop 0 " ile yazılımı kapatmanız " pm2 flush " ile logları temizlemeniz ve " pm2 start 0 " yazılımı ve logları baştan açmanızı öneririm. Bu şekilde hata takibi daha kolay ve daha verimli olacaktır.
-#### MMM-LICE modülünü ana birim TRY olacak şekilde düzenledim ve modülü indirten sonra config dosyamdan örnek alıp config dosyanızı oluşturabilir sonrada modül dosyasını benimki ile değiştirerek ana birimi TRY yapabilirsiniz.
+#### MMM-LICE modülünü ana birim TRY olacak şekilde düzenledim ve modülü indirdikten sonra config dosyamdan örnek alıp config dosyanızı oluşturabilir sonrada modül dosyasını benimki ile değiştirerek ana birimi TRY yapabilirsiniz.
 * Modül kurulumunu da anlattığımıza göre artık yapacak tek şeyimiz takvim ve hava durumu modüllerini düzenlemek.
 ### Default modüllerin düzenlenmesi
 * Bu esnada default gelen takvim, hava durumu ve haber modüllerini düzenleyeceğiz.
