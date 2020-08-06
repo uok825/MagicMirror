@@ -16,6 +16,7 @@ Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunl
 *  Erkek-Dişi jumper kablo (PIR ve Röle için)
 *  Micro SD Card okuyucu  
 *  Micro USB kablosu
+*  VGA Kablosu
 ### Gereken yazılımlar
 *  Gereken yazılım son sürüm [Raspbian](https://www.raspberrypi.org/downloads/raspberry-pi-os/) burada kullanacağınız Raspbian: Lite sürümü olmamalı, önerilen yazılımlar işimize yaramasa da yükleyip yüklememek size kalıyor. Ben burada "Raspberry Pi OS (32-bit) with desktop" Mayıs 2020 sürümünü kullandım.
 *  Raspberry Zero için derlenmiş özel yükleme scripti:
