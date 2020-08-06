@@ -42,5 +42,5 @@ network={
 ### MagicMirror kurulumu
 * Önceki adımları başarıyla tamamladıysanız sizi tebrik ediyorum ve gelin şimdi Ayna yazılımını kuralım.
 * Bu aşamayı ister Putty terminali üzerinden isterseniz de VNC Viewer ile bağlanıp Raspi terminali üzerinden yapabilirsiniz fakat ben size Putty'i öneriyorum.
-* Terminalimiz açıldığı zaman " apt-get update && apt-get upgrade " komudunu uyguluyoruz ve son güncellemeleri yüklüyoruz(10dk kadar alabilir internet hızına göre.).
+* Terminalimiz açıldığı zaman " sudo apt-get update && apt-get upgrade " komudunu uyguluyoruz ve son güncellemeleri yüklüyoruz(10dk kadar alabilir internet hızına göre.).
 * Gereken yazılımlar kısmında belirtmiş olduğum bash komutunu kopyalıyoruz ve terminalimize yapıştırıyoruz. Putty programını kullanıyorsanız sağ tık ile yapıştırabilirsiniz. Enterladığımız anda yükleme işleminiz başlamış olacak ve bu işlem çok uzun sürebilecektir(20-40dk) bu yüzden eğer ki Putty kullanıyorsanız Putty programını kapatmamanız Raspi'yi ve bilgisayarınızı internetten kesmemeniz gerekmektedir.
