@@ -44,3 +44,8 @@ network={
 * Bu aşamayı ister Putty terminali üzerinden isterseniz de VNC Viewer ile bağlanıp Raspi terminali üzerinden yapabilirsiniz fakat ben size Putty'i öneriyorum.
 * Terminalimiz açıldığı zaman " sudo apt-get update && apt-get upgrade " komudunu uyguluyoruz ve son güncellemeleri yüklüyoruz(10dk kadar alabilir internet hızına göre.).
 * Gereken yazılımlar kısmında belirtmiş olduğum bash komutunu kopyalıyoruz ve terminalimize yapıştırıyoruz. Putty programını kullanıyorsanız sağ tık ile yapıştırabilirsiniz. Enterladığımız anda yükleme işleminiz başlamış olacak ve bu işlem çok uzun sürebilecektir(20-40dk) bu yüzden eğer ki Putty kullanıyorsanız Putty programını kapatmamanız Raspi'yi ve bilgisayarınızı internetten kesmemeniz gerekmektedir.
+* Gerekli adımları yaptıysanız ve kurulum bittiyse MagicMirror otomatik olarak açılacaktır. Putty ekranında bu görüntüyü göremeyeceksiniz fakat ekranınızda yada VNC Viewer uygulaması ile görüntüleyebilirsiniz. Yazılım bilgisayar açıldıktan sonra yaklaşık 3dk'da açılmaktadır. Ekranı görünüyor takvim ve saat modülü sorunsuz çalışıyorsa buyrun gelin şimdi config dosyamızı ve modüllerimize göz atalım.
+* Ben bu aşamada modül olarak MMM-LICE modülünü ve MMM-MyPrayerTimes modülünü kullanmaktayım.
+* Lice modülü günlük döviz miktarını gösteren bir model. Saatlik versiyonu maalesef bulunmuyor ama elimden gelirse kendim yazıp paylaşacağım.
+* MyPrayerTimes modülü ise isminden anlaşılacağı üzere bulunduğunuz lokasyonun ezan vakitlerini gösteriyor.
+* Modül yükleyip yüklememek size kalmış bir şey. Diğer modüllerin hepsi [bu](https://github.com/MichMich/MagicMirror/wiki/3rd-party-modules) sayfada mevcut.
