@@ -49,3 +49,36 @@ network={
 * Lice modülü günlük döviz miktarını gösteren bir model. Saatlik versiyonu maalesef bulunmuyor ama elimden gelirse kendim yazıp paylaşacağım.
 * MyPrayerTimes modülü ise isminden anlaşılacağı üzere bulunduğunuz lokasyonun ezan vakitlerini gösteriyor.
 * Modül yükleyip yüklememek size kalmış bir şey. Diğer modüllerin hepsi [bu](https://github.com/MichMich/MagicMirror/wiki/3rd-party-modules) sayfada mevcut.
+* Modüllerin ne işe yaradığını anladığımıza göre gelin modülleri nasıl kuracağımıza bakalım.
+### Modüllerin Kurulumu
+* Öncelikle kurmak istediğimiz modülün github sayfasına gidiyoruz, ben burada örnek olarak MyPrayerTimes modülünü alıyorum.
+* Modülün [GitHub](https://github.com/htilburgs/MMM-MyPrayerTimes) sayfasına gittiğimiz zaman açıklama kısmında hangi komutların uygulanacağına bakabilirsiniz kısaca ben ne işe yaradıklarını anlatayım.
+* " cd ~/MagicMirror/modules " komutu bizim modül klasörümüze giden komuttur.
+* " git clone https://github.com/htilburgs/MMM-MyPrayerTimes " komutu bize gerekli olan dosyaları klonlamaya(indirmeye) yarayan komuttur.
+* " cd MMM-MyPrayerTimes " komutu bizim inen modül klasörüne giden komuttur.
+* " npm install " komutu bizim modülümüz için gerekliyse node eklentilerini kurmaya yarayan komuttur. Bu komut modülün büyüklüğüne ve istediği eklenti sayısına göre uzayabilir yada HATA verebilir. Burada hatayı genellikle electron eklentisi üzerinden alıyoruz. Raspberry Zeroya electron yüklenemediği için yada yüklenip de düzgün çalışmadığı için genellikle hata verir, hatayı çözmek için modülün github sayfasına bir issue oluşturmamız ve hatayı belirtmemiz gerekir. Eğer ki sorun çözülebilecek bir problem ise çözümünü zaten belirtir yapımcıyı yada herhangi biri fakat çözümü yok isek o modülü maalesef yükleyemeyiz. Electron problemi almamak için Pi 3b ve üstü sürüm gerekir onun içinde farklı bir yükleme sayfasına bakabilirsiniz ben bu konuda sadece pi zero'ya yüklenmesi hakkında bilgi vereceğim.
+* Modülün configuration kısmında belirtilen kod satırları bizim config dosyamıza eklememiz ve düzenlememiz gereken satırlardır. Bu ayarları ister config dosyasından isterseniz modülün kendi dosyasından değiştirebilirsiniz. Modülün kendi dosyasından değiştirirseniz config dosyasına herhangi bir ayar yazmadan sadece altta belirtilen şekilde yazmamız gerekir. Ben kendi prayertime modül dosyamı sayfama bırakıyorum.
+````
+{
+  module: 'MMM-MyPrayerTimes',
+  position: 'Konumu',
+  header: 'Başlık',
+  config: {
+	  }
+},
+````
+* Modülü başarıyla kurduysak terminalimize " pm2 restart 0 " yazarak aynamızın yazılımını yeniden başlatıyoruz. 2dk kadar sürebilir.
+* Bu esnada ayna açıldıktan sonra logları kontrol etmek için " pm2 logs --lines=100 " komudunu uygulayabilirsiniz.
+* Eski logları silmek için " pm2 flush " komudu kullanılır ve benim size tavsiye ettiğim yeni bir modül yüklediğinizde önce " pm2 stop 0 " ile yazılımı kapatmanız " pm2 flush " ile logları temizlemeniz ve " pm2 start 0 " yazılımı ve logları baştan açmanızı öneririm. Bu şekilde hata takibi daha kolay ve daha verimli olacaktır.
+#### MMM-LICE modülünü ana birim TRY olacak şekilde düzenledim ve modülü indirten sonra config dosyamdan örnek alıp config dosyanızı oluşturabilir sonrada modül dosyasını benimki ile değiştirerek ana birimi TRY yapabilirsiniz.
+* Modül kurulumunu da anlattığımıza göre artık yapacak tek şeyimiz takvim ve hava durumu modüllerini düzenlemek.
+### Default modüllerin düzenlenmesi
+* Bu esnada default gelen takvim, hava durumu ve haber modüllerini düzenleyeceğiz.
+* Bunun için ~/MagicMirror/config klasörüne giriyoruz. Eğer WINSCP kullanıyorsanız çift tıklayarak config.js dosyasını düzenleme modunda açabilirsiniz bu esnada winscp kullanmanızı şiddetle öneriyorum çünkü putty üzerinde dosya düzenlemek insanın saçlarını söküyor :). Dosyayı düzenlerken gereken şeyler Google Takvim linkiniz ve OpenWeatherMap API keyiniz.
+* İlk olarak hava durumunu düzenleyelim bu esnada [bu](https://openweathermap.org/price) linke girip Free olan kısımdan GET API KEY tuşununa basıyoruz ve üye olup API keyimizi alıyoruz. İsmini şehrinizin ismini koyabilirsiniz. API keyi aldıktan sonra kopyalıyoruz bulamıyorsanız [bu](https://home.openweathermap.org/api_keys) sayfaya gidip kopyalayabilirsiniz bunu bir yere not ediyoruz.
+* Şimdi şehir kodumuzu bulalım bunun için openweathermap sayfasından şehrimizin hava durumunu açıyoruz. Ben Konya'nınkini açıyorum. Linkimiz örnek olarak şöyle olacak şehrimizi açtıktan sonra " https://openweathermap.org/city/306569 " sondaki 306569 Konya'nın şehir kodu oluyor. Şimdi config dosyamıza tekrar gelelim. Bu kısımda currentweather kısmını buluyoruz ve location kısmını şehir isminizi yazıyorsunuz baş harfi büyük ve ing olacak şekilde örn Istanbul,Izmır,Usak gibi. LocationID kısmına şehir kodumuzu ve appid kısmına ise API keyimizi yazıyoruz. Bunların hepsi tırnak içinde olacak bunu atlamayalım.
+* Weatherforecast kısmına da aynı işlemleri uyguluyoruz burada değiştirmemiz kısım header: kısmı bu kısma türkçe olarak ben Hava Durumu yazdım. Bu ekranda görünecek başlık kısmı. Her şeyi yaptıktan sonra winscp editörünü ctrl+s diyerek kaydediyoruz ve dosyayı otomatik olarak yüklüyor winscp hata almamaya dikkat edin.
+* Şimdi gelelim takvimi yüklemeye bu kısımda Google Takvime(calendar.google.com) giriyoruz internet tarayıcımızdan. Sağ üstte ayar menüsünden ayarlara giriyoruz. Sol tarafda takvimlerimin ayarları kısmından takvimi seçip giriyoruz. Aşağıya indiğimizde iCal biçiminde gizli adres başlığı altında bir link görüyoruz, bu linki kopyalayıp not ediyoruz.
+* Ardından config dosyamızın calendar başlığı altında header sekmesini türkçeye çevirip düzenliyoruz ben Takvimim Ve Özel Günler yazdım. Calendars kısmında yazılı olan linki silip tırnak içinde yine kendi iCal linkimizi yapıştırıyoruz. Bu kısımda bu kadar ctrl+s diyerek yine kaydedebilirsiniz.
+* Şimdi gelelim haber düzenlemeye bu esnada config dosyamızdan newsfeed modülüne gelip title olan kısma haber sitesinin ismi ve url kısmına haber sitemizin besleme linkini yazıyoruz. Birden fazla haber sitesi yazmak için benim config dosyamı örnek alabilirsiniz.
+* Bazı haber sitelerinin besleme linkleri : [Link](https://haberss.mertskaplan.com/Haber_sitelerinin_RSS_adresleri)
