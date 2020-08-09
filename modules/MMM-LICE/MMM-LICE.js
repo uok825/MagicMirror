@@ -138,8 +138,8 @@ Module.register("MMM-LICE", {
 				newElement.innerHTML += Brm + '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp' + val + '&nbsp $'; // + " = " + symbols[c];
 			}
 			if(Brm == "XAG"){
-				var val = (TRY/XAG).toString().slice(0,7);
-				newElement.innerHTML += Brm + '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp' + val; // + " = " + symbols[c];
+				var val = (1/XAG).toString().slice(0,7);
+				newElement.innerHTML += Brm + '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp' + val + '&nbsp $'
 			}
 			if(Brm == "TRY"){
 				var val = LICE.quotes[Key].toString().slice(0,4);
