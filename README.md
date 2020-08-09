@@ -93,3 +93,5 @@ network={
 ![Resim3](images/Resim3.jpg)
 ![Resim4](images/Resim4.jpg)
 ![Resim5](images/Resim5.jpg)
+
+#### Eğer yaptığım projeyi beğendiyseniz destek olmak için bağış gönderebilirsiniz papara id : 5070792465
