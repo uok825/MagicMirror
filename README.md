@@ -95,3 +95,5 @@ network={
 ![Resim5](images/Resim5.jpg)
 
 #### Eğer yaptığım projeyi beğendiyseniz destek olmak için bağış gönderebilirsiniz papara id : 5070792465
+#### ERC20: 0xb9D795B50542920618b2176d3675B6d8Be4d5838
+#### Open for Brave Rewards Donate
