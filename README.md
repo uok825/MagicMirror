@@ -94,6 +94,7 @@ network={
 ![Resim4](images/Resim4.jpg)
 ![Resim5](images/Resim5.jpg)
 
-#### Eğer yaptığım projeyi beğendiyseniz destek olmak için bağış gönderebilirsiniz papara id : 5070792465
-#### ERC20: 0xb9D795B50542920618b2176d3675B6d8Be4d5838
-#### Open for Brave Rewards Donate
+#### Eğer yaptığım projeyi beğendiyseniz destek olmak için bağış gönderebilirsiniz.
+#### Papara ID : 5070792465
+#### ERC20,BEP20,AVAX C-CHAIN,POLYGON: 0xb9D795B50542920618b2176d3675B6d8Be4d5838
+#### Brave(BAT) Browser Bağışlarına Açıktır.
