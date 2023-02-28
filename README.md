@@ -1,7 +1,7 @@
 # MagicMirror
 Turkish Guide
 Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunlar.
-
+Rehber 2020 yılında güncellenmiştir.
 ### Gereken donanım,eşyalar ve fiyatları
 *  Raspberry Pi Zero Wireless(W veya WH) - 85₺ - [Link](https://market.samm.com/raspberry-pi-zero-w)
 *  Monitör için Konya'da bulunan bilgisayarcılar çarşısına gittim ve esnafları gezerken ayağı kırık bir şekilde Samsung 19" monitör buldum. - 150₺
