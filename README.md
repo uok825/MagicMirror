@@ -1,4 +1,5 @@
 # MagicMirror
+Turkish Guide
 Raspberry Zero ile Akıllı Ayna yapımı ve yaparken karşılaştığım sorunlar.
 
 ### Gereken donanım,eşyalar ve fiyatları
